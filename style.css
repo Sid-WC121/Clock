@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #c3c4c8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.digital-clock{
+    position: relative;
+    color: rgb(203, 155, 155);
+    background: #010c3a;
+    width: 425px;
+    padding: 20px 45px;
+    box-shadow: 0 5px 25px rgba(67, 86, 129, 0.8);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.time{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hours, .minutes{
+    font-size: 6.5em;
+    width: 125px; 
+}
+.dots{
+    font-size: 5em;
+    color: #fbf5f5;
+}
+.right-side{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+    display: flex;
+}
+.period, .seconds{
+    font-size: 1.2em;
+    font-weight: 500; 
+}
+.period{
+    transform: translateY(-20px);
+    color:#c6c88bcb;
+}
+.seconds{
+    transform: translateY(16px);
+    color:#0df4c6;
+}
+.calendar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color:#9f8e9a;
+}
+.day-name, .day-number, .year{
+    margin-left: 8px;
+}
+.dot-menu{
+    z-index: 999;
+    list-style: none;
+    background: #ae933c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease ;
+}
+.dot-menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+.menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock-format-text{
+    color: #201010;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+.format-switch-btn{
+    width: 35px;
+    height: 15px;
+    background: #010c3a;
+    border-radius: 75px;
+    box-shadow: inset 2px 2px 4px rgba(1, 5, 37, 0.856),
+                inset -2px -2px 4px rgba(2, 11, 88, 0.11);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;            
+}
+.format-switch-btn:before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #EAFDFC;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px #02120b;
+    transform: translateX(-10px);
+    transition: 0.3s ease;
+    transition-property: background, transform;
+}
+.format-switch-btn.active:before{
+    background: #03fc31;
+    box-shadow: 0 5px 25px #010e09;
+    transform: translateX(10px);
+}
+.clock{
+  width: 350px;
+  height:350px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  background-size: cover;
+  border: 4px solid rgb(221, 191, 191);
+  border-radius: 50%;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.clock:before{
+  content:'';
+  position:absolute;
+  width:15px;
+  height:15px;
+  background:rgb(198, 225, 222);
+  border-radius:50%;
+  z-index: 10000;
+}
+.clock .hour, 
+.clock .min, 
+.clock .sec {
+  position:absolute;
+}
+.clock .hour, .hr{
+  width:160px;
+  height:160px;
+}
+.clock .min, .mn{
+  width:190px;
+  height:190px;
+}
+.clock .sec, .sc{
+  width:230px;
+  height:230px;
+}
+.hr, .mn, .sc{
+display:flex;
+justify-content: center;
+position:absolute;
+border-radius: 50%; 
+}
+
+.hr:before{
+  content:'';
+  position:absolute;
+  width:8px;
+  height:80px;
+  background:#f8f7f7;
+  z-index:10;
+  border-radius: 6px 6px 0 0;
+}
+.mn:before{
+  content:'';
+  position:absolute;
+  width:4px;
+  height:90px;
+  background:rgb(11, 181, 104);
+  z-index:11;
+  border-radius: 6px 6px 0 0;
+}
+.sc:before{
+  content:'';
+  position:absolute;
+  width:2px;
+  height:150px;
+  background:#be8196;
+  z-index:12;
+  border-radius: 6px 6px 0 0;
+}
